@@ -1,59 +1,56 @@
-# Contributing Guidelines
+# 贡献指南
 
-Some basic conventions for contributing to this project.
+一些基本的项目约定.
 
-### General
+### 通用
 
-Please make sure that there aren't existing pull requests attempting to address the issue mentioned. Likewise, please check for issues related to update, as someone else may be working on the issue in a branch or fork.
+请确定还没有已存在的提交请求尝试定位涉及的问题. 同样的, 请检查是否有更新的相关问题, 因为其他人可能已经在另一个分支上解决这个问题了.
 
-* Non-trivial changes should be discussed in an issue first
-* Develop in a topic branch, not master
-* Squash your commits
+* 大面积的变动应该先在一个问题中讨论好
+* 在一个单独的分支中进行开发, 而不是在主分支上
+* 你的评论应该言简意赅
 
-### Linting
+### 代码校验
 
-Please check your code using `npm run lint` before submitting your pull requests, as the CI build will fail if `eslint` fails.
+请在发布你的提交请求前使用 `npm run lint` 检查你的代码, 因为如果 `eslint` 失败的话 CI 构建系统也将失败.
 
-### Commit Message Format
+### 提交信息格式
 
-Each commit message should include a **type**, a **scope** and a **subject**:
+每个提交信息都应该包含 **类型**, **范围** 和 **主题**:
 
 ```
- <type>(<scope>): <subject>
+ <类型>(<范围>): <主题>
 ```
 
-Lines should not exceed 100 characters. This allows the message to be easier to read on github as well as in various git tools and produces a nice, neat commit log ie:
+每行文字不应超过 100 个字符. 这将使信息在 GitHub 和不同的 git 工具中更易读, 同时生成一个美观整洁的提交日志信息, 例如:
 
 ```
  #271 feat(standard): add style config and refactor to match
- #270 fix(config): only override publicPath when served by webpack 
- #269 feat(eslint-config-defaults): replace eslint-config-airbnb 
- #268 feat(config): allow user to configure webpack stats output 
-``` 
+ #270 fix(config): only override publicPath when served by webpack
+ #269 feat(eslint-config-defaults): replace eslint-config-airbnb
+ #268 feat(config): allow user to configure webpack stats output
+```
 
-#### Type
+#### 类型
 
-Must be one of the following:
+必须是以下选项中的一个:
 
-* **feat**: A new feature
-* **fix**: A bug fix
-* **docs**: Documentation only changes
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing
-  semi-colons, etc)
-* **refactor**: A code change that neither fixes a bug or adds a feature
-* **test**: Adding missing tests
-* **chore**: Changes to the build process or auxiliary tools and libraries such as documentation
-  generation
+* **feat**: 新特性
+* **fix**: 漏洞修复
+* **docs**: 只有文档修改
+* **style**: 不影响代码含义的变化 (空格、格式化、缺失分号等等)
+* **refactor**: 既不是修复漏洞也不是添加特性的代码调整
+* **test**: 添加缺失的测试用例
+* **chore**: 改变构建过程或辅助工具和库，如文档生成
 
-#### Scope
+#### 范围
 
-The scope could be anything specifying place of the commit change. For example `webpack`,
-`babel`, `redux` etc...
+范围可以是任何用来区分提交变化位置的词. 例如 `webpack`、`babel`、 `redux` 等等...
 
-#### Subject
+#### 主题
 
-The subject contains succinct description of the change:
+主题中包含了关于变化的简介描述:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
-* no dot (.) at the end
+* 使用单数现在时: "change" 而不是 "changed" 也不是 "changes"
+* 首字母不大写
+* 结尾不需要点结束符(.)
