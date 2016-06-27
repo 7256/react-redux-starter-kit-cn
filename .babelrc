@@ -1,0 +1,8 @@
+// 注意: 这些可选项会被位于 ~/build/webpack.config.js 的 webpack 配置文件中的 babel-loader 配置项所覆盖
+//
+// 为什么? react-transform-hmr 插件依赖 HMR (译注:Hot Module Replacement, webpack 提供的模块热替换特性)
+// (如果 module.hot 被禁用将抛出异常), 因此需要将它和相关联的插件保留在 webpack 配置项中以避免意外的错误.
+{
+  "presets": ["es2015", "react", "stage-0"],
+  "plugins": ["transform-runtime"]
+}
