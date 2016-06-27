@@ -1,30 +1,30 @@
 # http://editorconfig.org
 
-# A special property that should be specified at the top of the file outside of
-# any sections. Set to true to stop .editor config file search on current file
+# 一个特殊的属性, 应该在文件顶部、任何其他部分以外指定.
+# 设置为 true 时停止 .editor 配置文件搜索, 只使用当前文件的配置
 root = true
 
 [*]
-# Indentation style
-# Possible values - tab, space
+# 缩减风格
+# 可能的值 - tab, space
 indent_style = space
 
-# Indentation size in single-spaced characters
-# Possible values - an integer, tab
+# 每个间隔字符的缩进尺寸
+# 可能的值 - 整数, tab
 indent_size = 2
 
-# Line ending file format
-# Possible values - lf, crlf, cr
+# 行末尾格式化
+# 可能的值 - lf, crlf, cr
 end_of_line = lf
 
-# File character encoding
-# Possible values - latin1, utf-8, utf-16be, utf-16le
+# 文件字符编码
+# 可能的值 - latin1, utf-8, utf-16be, utf-16le
 charset = utf-8
 
-# Denotes whether to trim whitespace at the end of lines
-# Possible values - true, false
+# 定义是否去除末尾行两端空白字符
+# 可能的值 - true, false
 trim_trailing_whitespace = true
 
-# Denotes whether file should end with a newline
-# Possible values - true, false
+# 定义文件是否应该以新行结尾
+# 可能的值 - true, false
 insert_final_newline = true
