@@ -71,7 +71,7 @@ $ npm start                     # 编译并启动服务
 |`compile`|编译应用程序到目录 (默认为 `~/dist`).|
 |`dev`|与 `npm run start` 相同, 但同时为服务器启用 nodemon.|
 |`dev:no-debug`|与 `npm run dev` 相同但禁用开发工具视图.|
-|`test`|Runs unit tests with Karma and generates a coverage report.|
+|`test`|使用 Karma 运行单元测试并生成一份覆盖率报告.|
 |`test:dev`|运行 Karma 测试并监听变化进行二次测试; 不生成代码覆盖率报告.|
 |`deploy`|运行代码校验、测试, 成功时编译你的应用程序到目录.|
 |`deploy:dev`|与 `deploy` 任务相同但覆盖 `NODE_ENV` 值为 "development".|
