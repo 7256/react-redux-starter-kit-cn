@@ -60,6 +60,7 @@
 
 ### 改进
 * 把生产环境构建也需要的依赖从 devDependencies 移动到正常的 dependencies
+
 ### 修复
 * 生产环境配置现在生成绝对路径而不是相对路径的资源
 
@@ -135,7 +136,7 @@
 * 更新路由定义文件以访问 redux store
 * 更细服务器启动信息使链接可点击
 * `ExtractTextPlugin` 现在无论 HMR 是否禁用都可以正确使用
-* `npm run deploy` 现在回清空 `~/dist` 文件夹
+* `npm run deploy` 现在会清空 `~/dist` 文件夹
 * 其他的文件夹结构改善
 * 删除不必要的 Karma `bin` 文件
 * 删除不必要的 `NotFoundView`
