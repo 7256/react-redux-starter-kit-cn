@@ -8,7 +8,7 @@
 
 这个启动包设计用于帮助你运用一整套酷炫的最新前端技术, 基于一个可配置的、功能丰富的构建系统 webpack, 它已经被设置为提供热重载、基于 SASS 的 CSS 模块、单元测试、代码覆盖率报告、打包分割, 以及等等等等.
 
-此项目的主要目标是尽可能地保留 **通用性**. 它的目的不是限定你的项目结构或展示一个完整的示例应用, 而是提供一系列的工具集合旨在使前端开发功能强大、易用, 以及更重要的是更愉悦地开发. 向下查阅所有的功能特性列表!
+此项目的主要目标是尽可能地保留 **通用性**. 它的目的不是限定你的项目结构或展示一个完整的示例应用, 而是提供一系列的工具集合旨在使前端开发功能强大、易用, 更重要的是使你能更愉悦地进行开发. 向下可以查阅所有的功能特性列表!
 
 最后, 这个项目离不开那么多贡献者的帮助, 所以[谢谢你们](#致谢)所有人的帮助.
 
@@ -54,7 +54,7 @@
 
 ```bash
 $ git clone https://github.com/JounQin/react-redux-starter-kit-cn.git
-$ cd react-redux-starter-kit
+$ cd react-redux-starter-kit-cn
 $ npm install                   # 安装项目依赖(译注: 可使用 cnpm 进行替代提高安装速度)
 $ npm start                     # 编译并启动服务
 ```
@@ -134,7 +134,7 @@ npm i --save-dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-m
 我们使用 `react-router` [路由定义](https://github.com/reactjs/react-router/blob/master/docs/API.md#plainroute) (`<route>/index.js`) 在我们的应用程序中定义逻辑单元. 查看 [应用结构](#应用结构) 部分浏览更多信息.
 
 ## 测试
-添加一个单元测试时, 简单地在 `~/tests` 目录任意位置创建一个 `.spec.js` 文件. Karma 将自动手机这些文件, 同时 Mocha 和 Chai 将在你的测试中可用而不需要引入他们. 如果你在使用 `redux-cli`, 测试文件应该是在你创建一个组件或 redux 模块时自动生成的.
+添加一个单元测试时, 简单地在 `~/tests` 目录任意位置创建一个 `.spec.js` 文件. Karma 将自动收集这些文件, 同时 Mocha 和 Chai 将在你的测试中可用且不需要引入他们. 如果你在使用 `redux-cli`, 测试文件应该是在你创建一个组件或 redux 模块时自动生成的.
 
 代码覆盖率报告将默认编译到 `~/coverage`. 如果你希望改变使用的报告模块和报告编译的位置, 你可以修改 `~/config/index.js` 中的 `coverage_reporters`.
 
