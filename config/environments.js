@@ -1,12 +1,12 @@
-// Here is where you can define configuration overrides based on the execution environment.
-// Supply a key to the default export matching the NODE_ENV that you wish to target, and
-// the base configuration will apply your overrides before exporting itself.
+// 在这里你可以根据执行环境定义覆盖配置.
+// 给默认导出的模块提供一个和你想要的指定的 NODE_EVN 参数匹配的关键词,
+// 基础配置将在导出它自身前应用你的覆盖.
 export default {
   // ======================================================
-  // Overrides when NODE_ENV === 'development'
+  // 当 NODE_ENV === 'development' 时覆盖的配置
   // ======================================================
-  // NOTE: In development, we use an explicit public path when the assets
-  // are served webpack by to fix this issue:
+  // 注意: 在开发环境, 当发布完成的资源是由 webpack 提供服务时,
+  // 我们使用一个明确的公共路径以解决这个问题:
   // http://stackoverflow.com/questions/34133808/webpack-ots-parsing-error-loading-fonts/34133809#34133809
   development: (config) => ({
     compiler_public_path: `http://${config.server_host}:${config.server_port}/`,
@@ -20,7 +20,7 @@ export default {
   }),
 
   // ======================================================
-  // Overrides when NODE_ENV === 'production'
+  // 当 NODE_ENV === 'production' 时覆盖的配置
   // ======================================================
   production: (config) => ({
     compiler_public_path: '/',

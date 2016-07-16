@@ -9,13 +9,13 @@ const debug = _debug('app:config')
 debug('Creating default configuration.')
 
 // ========================================================
-// Default Configuration
+// 默认配置
 // ========================================================
 const config = {
   env : process.env.NODE_ENV || 'development',
 
   // ----------------------------------
-  // Project Structure
+  // 项目结构
   // ----------------------------------
   path_base  : path.resolve(__dirname, '..'),
   dir_client : 'src',
@@ -24,13 +24,13 @@ const config = {
   dir_test   : 'tests',
 
   // ----------------------------------
-  // Server Configuration
+  // 服务器配置
   // ----------------------------------
-  server_host : localip, // use string 'localhost' to prevent exposure on local network
+  server_host : localip, // 使用字符串 'localhost' 防止在本地网络上暴露
   server_port : process.env.PORT || 3000,
 
   // ----------------------------------
-  // Compiler Configuration
+  // 编译配置
   // ----------------------------------
   compiler_css_modules     : true,
   compiler_devtool         : 'source-map',
@@ -53,7 +53,7 @@ const config = {
   ],
 
   // ----------------------------------
-  // Test Configuration
+  // 测试配置
   // ----------------------------------
   coverage_reporters : [
     { type : 'text-summary' },
@@ -64,16 +64,16 @@ const config = {
 /************************************************
 -------------------------------------------------
 
-All Internal Configuration Below
-Edit at Your Own Risk
+下面所有的内部配置
+编辑时请您自担风险
 
 -------------------------------------------------
 ************************************************/
 
 // ------------------------------------
-// Environment
+// 环境
 // ------------------------------------
-// N.B.: globals added here must _also_ be added to .eslintrc
+// 附注: 在这里添加的全局变量也必须在 .eslintrc 中添加
 config.globals = {
   'process.env'  : {
     'NODE_ENV' : JSON.stringify(config.env)
@@ -88,7 +88,7 @@ config.globals = {
 }
 
 // ------------------------------------
-// Validate Vendor Dependencies
+// 验证公共依赖
 // ------------------------------------
 const pkg = require('../package.json')
 
@@ -104,7 +104,7 @@ config.compiler_vendor = config.compiler_vendor
   })
 
 // ------------------------------------
-// Utilities
+// 工具集
 // ------------------------------------
 const resolve = path.resolve
 const base = (...args) =>
@@ -117,7 +117,7 @@ config.utils_paths = {
 }
 
 // ========================================================
-// Environment Configuration
+// 环境配置
 // ========================================================
 debug(`Looking for environment overrides for NODE_ENV "${config.env}".`)
 const environments = require('./environments').default

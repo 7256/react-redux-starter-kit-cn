@@ -7,7 +7,7 @@ const debug = _debug('app:karma')
 debug('Create configuration.')
 
 const karmaConfig = {
-  basePath: '../', // project root in relation to bin/karma.js
+  basePath: '../', // 相对于 bin/karma.js 的项目根目录
   files: [
     {
       pattern: `./${config.dir_test}/test-bundler.js`,
@@ -44,7 +44,7 @@ const karmaConfig = {
         }
       ])
     },
-    // Enzyme fix, see:
+    // Enzyme 修复情况, 查看:
     // https://github.com/airbnb/enzyme/issues/47
     externals: {
       ...webpackConfig.externals,
@@ -72,5 +72,5 @@ if (config.globals.__COVERAGE__) {
   }]
 }
 
-// cannot use `export default` because of Karma.
+// 由于使用 Karma 所以不能用 `export default`.
 module.exports = (cfg) => cfg.set(karmaConfig)
