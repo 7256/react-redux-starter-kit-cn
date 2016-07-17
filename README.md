@@ -104,7 +104,6 @@ $ npm start                     # 编译并启动服务
 │   │   └── reducers.js      # Reducer 声明和注入
 │   └── routes               # 主路由定义和异步分割点
 │       ├── index.js         # 使用 store 启动主应用程序路由
-│       ├── Root.js          # 为上下文组件 providers 包装组件
 │       └── Home             # 分形路由
 │           ├── index.js     # 路由定义和异步分割点
 │           ├── assets       # 渲染组件需要的资源
@@ -142,7 +141,7 @@ npm i --save-dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-m
 此启动包开箱即用, 通过在 `npm run deploy` 生成的 `~/dist` 目录启动服务进行部署(请同时确认指定你的目标环境 `NODE_ENV`). 此项目自身不关注服务器端渲染或 API 结构细节, 因为这需要一个固化的结构, 这将使这份启动包难以扩展. 但是, 如果你需要更先进的部署策略方面的帮助, 这里有几个小技巧:
 
 ### 静态发布
-如果你正在使用一个诸如 nginx 的 Web 服务器启动应用程序, 请确保引导接收到的路由至根文件 `~/dist/index.html` 并让 react-router 处理其余部分. 启动包附带的 Koa 服务可以被扩展为提供 API 的服务器或其他任何你需要的东西, 但那完全取决于你.
+如果你正在使用一个诸如 nginx 的 Web 服务器启动应用程序, 请确保引导接收到的路由至根文件 `~/dist/index.html` 并让 react-router 处理其余部分. 如果你不确定怎么做, 你可以会发现[这份文档](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#configuring-your-server)有所帮助. 启动包附带的 Koa 服务可以被扩展为提供 API 的服务器或其他任何你需要的东西, 但那完全取决于你.
 
 ### Heroku
 
