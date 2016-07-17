@@ -1,6 +1,6 @@
 import HomeView from './components/HomeView'
 
-// Sync route definition
+// 同步路由定义
 export default {
   component: HomeView
 }

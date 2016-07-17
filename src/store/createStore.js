@@ -5,12 +5,12 @@ import makeRootReducer from './reducers'
 
 export default (initialState = {}, history) => {
   // ======================================================
-  // Middleware Configuration
+  // 中间件定义
   // ======================================================
   const middleware = [thunk, routerMiddleware(history)]
 
   // ======================================================
-  // Store Enhancers
+  // Store 增强
   // ======================================================
   const enhancers = []
   if (__DEBUG__) {
@@ -21,7 +21,7 @@ export default (initialState = {}, history) => {
   }
 
   // ======================================================
-  // Store Instantiation and HMR Setup
+  // Store 实例化和热模版替换设置
   // ======================================================
   const store = createStore(
     makeRootReducer(),

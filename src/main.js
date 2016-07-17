@@ -7,19 +7,19 @@ import createStore from './store/createStore'
 import AppContainer from './containers/AppContainer'
 
 // ========================================================
-// Browser History Setup
+// 浏览器历史设置
 // ========================================================
 const browserHistory = useRouterHistory(createBrowserHistory)({
   basename: __BASENAME__
 })
 
 // ========================================================
-// Store and History Instantiation
+// Store 和 History 实例化
 // ========================================================
-// Create redux store and sync with react-router-redux. We have installed the
-// react-router-redux reducer under the routerKey "router" in src/routes/index.js,
-// so we need to provide a custom `selectLocationState` to inform
-// react-router-redux of its location.
+// 创建 redux store 和与 react-router-redux 进行同步.
+// 我们已经在 src/routes/index.js 中将 react-router-redux reducer
+// 安装在路由关键字 "router" 下, 所以我们需要提供一个自定义的 `selectLocationState`
+// 来通知 react-router-redux 它的位置.
 const initialState = window.___INITIAL_STATE__
 const store = createStore(initialState, browserHistory)
 const history = syncHistoryWithStore(browserHistory, store, {
@@ -27,7 +27,7 @@ const history = syncHistoryWithStore(browserHistory, store, {
 })
 
 // ========================================================
-// Developer Tools Setup
+// 开发工具设置
 // ========================================================
 if (__DEBUG__) {
   if (window.devToolsExtension) {
@@ -36,7 +36,7 @@ if (__DEBUG__) {
 }
 
 // ========================================================
-// Render Setup
+// 渲染设置
 // ========================================================
 const MOUNT_NODE = document.getElementById('root')
 
@@ -54,8 +54,8 @@ let render = (routerKey = null) => {
   )
 }
 
-// Enable HMR and catch runtime errors in RedBox
-// This code is excluded from production bundle
+// 启用热模块替换并在 RedBox 里抓住运行时错误
+// 此代码在生产环境绑定包中排除
 if (__DEV__ && module.hot) {
   const renderApp = render
   const renderError = (error) => {
@@ -74,6 +74,6 @@ if (__DEV__ && module.hot) {
 }
 
 // ========================================================
-// Go!
+// 开始!
 // ========================================================
 render()

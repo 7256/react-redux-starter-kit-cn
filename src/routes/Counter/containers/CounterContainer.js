@@ -1,16 +1,15 @@
 import { connect } from 'react-redux'
 import { increment, doubleAsync } from '../modules/counter'
 
-/*  This is a container component. Notice it does not contain any JSX,
-    nor does it import React. This component is **only** responsible for
-    wiring in the actions and state necessary to render a presentational
-    component - in this case, the counter:   */
+/*  这是一个容器组件. 注意它不包含任何 JSX, 也没有引入 React.
+    这个组件 **只是** 负责将 actions 和 state 连结起来
+    渲染一个表现性组件 - 例如下面的计数器的情况:   */
 
 import Counter from 'components/Counter'
 
-/*  Object of action creators (can also be function that returns object).
-    Keys will be passed as props to presentational components. Here we are
-    implementing our wrapper around increment; the component doesn't care   */
+/*  action 的创建器对象 (也可以是返回对象的函数).
+    键值会通过 props 传给表现性组件. 这里我们实现了我们围绕增长的封装;
+    组件并不关心这些   */
 
 const mapActionCreators = {
   increment: () => increment(1),
@@ -21,7 +20,7 @@ const mapStateToProps = (state) => ({
   counter: state.counter
 })
 
-/*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
+/*  注意: mapStateToProps 的部分你应该用 `reselect` 来创建选择器, 例如:
 
     import { createSelector } from 'reselect'
     const counter = (state) => state.counter
@@ -30,9 +29,9 @@ const mapStateToProps = (state) => ({
       counter: tripleCount(state)
     })
 
-    Selectors can compute derived data, allowing Redux to store the minimal possible state.
-    Selectors are efficient. A selector is not recomputed unless one of its arguments change.
-    Selectors are composable. They can be used as input to other selectors.
+    选择器可以计算产生的数据, 允许 Redux 尽可能最小化地存储 state.
+    选择器是很有效的. 除非选择器的参数变化, 它就不会重新计算.
+    选择器是可组合的. 他们可以被用做其他选择器的输入.
     https://github.com/reactjs/reselect    */
 
 export default connect(mapStateToProps, mapActionCreators)(Counter)

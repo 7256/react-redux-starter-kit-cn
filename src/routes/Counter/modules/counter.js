@@ -1,5 +1,5 @@
 // ------------------------------------
-// Constants
+// 常量
 // ------------------------------------
 export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 
@@ -13,13 +13,12 @@ export function increment (value = 1) {
   }
 }
 
-/*  This is a thunk, meaning it is a function that immediately
-    returns a function for lazy evaluation. It is incredibly useful for
-    creating async actions, especially when combined with redux-thunk!
+/*  这个是一个 thunk 函数, 意思是它是一个立即执行函数, 并返回一个延迟测试的函数.
+    这在创建异步 actions 时非常有用, 特别是使用 redux-thunk 绑定时!
 
-    NOTE: This is solely for demonstration purposes. In a real application,
-    you'd probably want to dispatch an action of COUNTER_DOUBLE and let the
-    reducer take care of this logic.  */
+    注意: 这完全是为了演示目的. 在实际的应用中,
+    你可能想要发送一个 COUNTER_DOUBLE 的 action,
+    让 reducer 处理好这块儿逻辑.  */
 
 export const doubleAsync = () => {
   return (dispatch, getState) => {
@@ -38,7 +37,7 @@ export const actions = {
 }
 
 // ------------------------------------
-// Action Handlers
+// Action 处理器
 // ------------------------------------
 const ACTION_HANDLERS = {
   [COUNTER_INCREMENT]: (state, action) => state + action.payload

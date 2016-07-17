@@ -1,10 +1,10 @@
 /*
-Application Settings Go Here
+应用设置在这里
 ------------------------------------
-This file acts as a bundler for all variables/mixins/themes, so they
-can easily be swapped out without `core.scss` ever having to know.
+这个文件会将所有值/混合器/主题打包起来,
+所以它们可以在没有 `core.scss` 时轻松使用甚至不必知道它们的存在.
 
-For example:
+举个例子:
 
 @import './variables/colors';
 @import './variables/components';

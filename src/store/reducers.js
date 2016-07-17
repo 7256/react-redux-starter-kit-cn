@@ -3,7 +3,7 @@ import { routerReducer as router } from 'react-router-redux'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
-    // Add sync reducers here
+    // 在这里添加同步 reducers
     router,
     ...asyncReducers
   })
