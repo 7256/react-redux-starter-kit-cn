@@ -107,9 +107,8 @@ describe('(Redux Module) Counter', () => {
     })
   })
 
-  // NOTE: if you have a more complex state, you will probably want to verify
-  // that you did not mutate the state. In this case our state is just a number
-  // (which cannot be mutated).
+  // 注意: 如果你有一个更负责的 state 对象, 你可能想要确认你没有修改 state 对象.
+  // 这个例子里我们的 state 只是一个数字(也就是说它本身不会被修改).
   describe('(Action Handler) COUNTER_INCREMENT', () => {
     it('Should increment the state by the action payload\'s "value" property.', () => {
       let state = counterReducer(undefined, {})
